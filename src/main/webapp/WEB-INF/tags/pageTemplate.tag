@@ -10,15 +10,15 @@
 
 <body>
 
-<!-- MENU -->
+
 <jsp:include page="/WEB-INF/pages/menu.jsp" />
 
-<!-- PAGE CONTENT -->
+
 <main class="container-fluid mt-5">
     <jsp:doBody/>
 </main>
 
-<!-- FOOTER (AICI îl pui) -->
+
 <jsp:include page="/WEB-INF/pages/footer.jsp" />
 
 </body>
