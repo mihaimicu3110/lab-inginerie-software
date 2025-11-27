@@ -14,8 +14,10 @@ public class Cars extends HttpServlet {
             throws ServletException, IOException {
 
         request.setAttribute("numberOfFreeParkingSpots", 10);
+        request.setAttribute("activePage", "Cars"); // <-- AICI era lipsa
 
         request.getRequestDispatcher("/WEB-INF/pages/cars.jsp")
                 .forward(request, response);
     }
 }
+
