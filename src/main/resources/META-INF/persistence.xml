@@ -12,11 +12,8 @@
         <class>org.example.parkinglot.entities.Car</class>
 
         <properties>
-            <!-- Creează automat tabelele dacă nu există -->
-            <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
-
-            <!-- Aplică modificările direct în baza de date -->
-            <property name="eclipselink.ddl-generation.output-mode" value="database"/>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create"/>
+            <property name="jakarta.persistence.schema-generation.create-source" value="metadata"/>
         </properties>
 
     </persistence-unit>

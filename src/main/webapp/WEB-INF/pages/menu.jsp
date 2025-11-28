@@ -32,6 +32,14 @@
                         </a>
                     </li>
 
+                    <!-- USERS BUTTON -->
+                    <li class="nav-item">
+                        <a class="nav-link ${activePage eq 'Users' ? 'active' : ''}"
+                           href="${pageContext.request.contextPath}/Users">
+                            Users
+                        </a>
+                    </li>
+
                     <!-- Example link -->
                     <li class="nav-item">
                         <a class="nav-link" href="#">Link</a>
@@ -51,6 +59,7 @@
                         </a>
                     </li>
                 </ul>
+
 
             </div>
         </div>

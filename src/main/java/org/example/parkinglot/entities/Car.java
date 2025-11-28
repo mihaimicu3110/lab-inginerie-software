@@ -2,6 +2,7 @@ package org.example.parkinglot.entities;
 
 import jakarta.persistence.*;
 
+
 @Entity
 @Table(name = "cars")
 public class Car {
