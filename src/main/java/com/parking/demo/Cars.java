@@ -11,6 +11,10 @@ import org.example.parkinglot.common.CarDto;
 import java.io.IOException;
 import java.util.List;
 
+import java.util.ArrayList;
+
+
+
 
 @WebServlet(name = "Cars", value = "/Cars")
 public class Cars extends HttpServlet {
@@ -35,4 +39,24 @@ public class Cars extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/pages/cars.jsp")
                 .forward(request, response);
     }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String[] carIdsAsString = request.getParameterValues("car_ids");
+
+        if (carIdsAsString != null) {
+            List<Long> carIds = new ArrayList<>();
+
+            for (String id : carIdsAsString) {
+                carIds.add(Long.parseLong(id));
+            }
+
+            carsBean.deleteCarsByIds(carIds);
+        }
+
+        response.sendRedirect(request.getContextPath() + "/Cars");
+    }
+
 }

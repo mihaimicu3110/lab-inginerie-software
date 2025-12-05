@@ -20,5 +20,8 @@
 
 <jsp:include page="/WEB-INF/pages/footer.jsp" />
 
+<!--  🔥 SCRIPTUL TREBUIE SĂ FIE AICI, NU MAI SUS -->
+<script src="${pageContext.request.contextPath}/scripts/form-validation.js"></script>
+
 </body>
 </html>
